@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Library</h1>
+        <div id="overlay">
+            <div id="input-form">
+                <button class="close-btn">x</button>
+                <h2 style="margin-top:20%">Enter Information</h2>
+                <br>
+                <br>
+                <input type="text" placeholder="title" required>
+                <br>
+                <br>
+                <input type="text" placeholder="author" required>
+                <br>
+                <br>
+                <input type="text" placeholder="pages" required>
+                <br>
+                <br>
+                <input type="radio" id="read" name="readstate">
+                <label for="read">read</label>
+                <input type="radio" id="unread" name="readstate">
+                <label for="unread">unread</label>
+                <br>
+                <br>
+                <input id="submit-btn" type="submit" type="button" value="add to library">    
+            </div>
+      </div> 
+        <button id="new-book-btn">New Book</button>
+        <section id="book-holder">
+
+        </section>
+    </main>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
