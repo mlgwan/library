@@ -19,20 +19,27 @@ overlay.children[0].children[19].addEventListener("click", ()=>{
     else{
         read = false;
     }
-    let book = new Book(title, author, pages, read)
-    addBookToLibrary(book);
-    hideOverlay();
-    render();
+    if (title && author && pages){
+        let book = new Book(title, author, pages, read)
+        addBookToLibrary(book);
+        hideOverlay();
+        render();  
+    }
+    
 });
 
 
-function Book(title,author,pages,read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.id = createId();
-    this.info = function(){
+class Book {
+    constructor(title,author,pages,read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = createId();
+    }
+    
+    
+    info(){
         return (read) ? `${title} by ${author}, ${pages} pages, alread read` : `${title} by ${author}, ${pages} pages, not read yet`;
     }
 }
